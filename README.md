@@ -39,7 +39,7 @@ A simple 1-tier architecture:
 
 ### Live URL
 You can access the deployed app here:  
-https://game-service-1083374021954.us-central1.run.app
+https://my-2048-game-673426855384.us-central1.run.app
 
 ---
 
