@@ -53,10 +53,10 @@ bash
 
 ### 2. Run the App Using a Local Server (for testing)
 
-# Install live server if not already
+If you don't have live-server installed, run:
 npm install -g live-server
 
-# Run
+Then start the server:
 live-server
 
 
@@ -74,6 +74,7 @@ docker build -t 2048-game .
 #3. Run Locally with Docker
 
 docker run -d -p 8080:80 2048-game
+
 
 ☁️ Deploy to Google Cloud Run
 
@@ -98,7 +99,6 @@ gcloud run deploy 2048-game \
   --platform managed \
   --region us-central1 \
   --allow-unauthenticated
-
 
 
 👩‍💻 Contribution by Anvesha Tripathi
