@@ -64,7 +64,7 @@ live-server
 ```
 
 ---
-📦 Containerize the Application
+## 📦 Containerize the Application
 
 #1. Create a Dockerfile
 
@@ -119,12 +119,16 @@ gcloud run deploy 2048-game \
 ```
 
 ---
-👩‍💻 Contribution by Anvesha Tripathi
+
+## 👩‍💻 Contribution by Anvesha Tripathi
+
 This cloud deployment and containerization were done by Anvesha Tripathi as part of a Cloud Computing project.
 The goal was to implement real-world cloud deployment using 1-Tier Architecture and serverless principles on Google Cloud Platform.
 
 ---
-📜 License
+
+## 📜 License
+
 This project is based on the original 2048 game and is licensed under the MIT License.
 
 
