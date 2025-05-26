@@ -1,21 +1,10 @@
-# Use an official Node.js runtime as the base image
-FROM node:18
+# Use Nginx base image
+FROM nginx:alpine
 
-# Set the working directory
-WORKDIR /app
+# Copy your static files to Nginx's web directory
+COPY . /usr/share/nginx/html
 
-# Copy all files to the container
-COPY . .
+# Expose port 80 (default Nginx port)
+EXPOSE 80
 
-# Install any dependencies (if package.json exists)
-RUN if [ -f package.json ]; then npm install; fi
-
-# Expose the port (optional if it's a frontend game)
-EXPOSE 8080
-
-# Use a basic HTTP server to serve the game
-RUN npm install -g http-server
-
-# Start the HTTP server
-CMD ["http-server", ".", "-p", "8080"]
-
+# No CMD needed — Nginx runs by default
