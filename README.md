@@ -36,6 +36,7 @@ Cloud Run (Container with Frontend + Backend)
 Google Container Registry (stores image)
 
 
+
 > ✅ Simple 1-tier: App is containerized and deployed as a single service.
 
 ---
@@ -51,8 +52,6 @@ bash
 ```
 
 ### 2. Run the App Using a Local Server (for testing)
-
-If it's a static site:
 
 # Install live server if not already
 npm install -g live-server
