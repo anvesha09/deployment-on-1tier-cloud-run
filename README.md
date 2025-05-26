@@ -54,51 +54,69 @@ bash
 ### 2. Run the App Using a Local Server (for testing)
 
 If you don't have live-server installed, run:
+```
 npm install -g live-server
+```
 
 Then start the server:
+```
 live-server
+```
 
 
 📦 Containerize the Application
 
 #1. Create a Dockerfile
 
+```
 FROM nginx:alpine
 COPY . /usr/share/nginx/html
+```
 
 #2. Build Docker Image
 
+```
 docker build -t 2048-game .
+```
 
 #3. Run Locally with Docker
 
+```
 docker run -d -p 8080:80 2048-game
+```
 
 
 ☁️ Deploy to Google Cloud Run
 
 #1. Authenticate and Set Project
 
+```
 gcloud auth login
 gcloud config set project my-first-project-2084
+```
 
 #2.Enable Required APIs
 
+```
 gcloud services enable run.googleapis.com
 gcloud services enable artifactregistry.googleapis.com
+```
 
 #3.Submit Build to Cloud Build
 
+```
 gcloud builds submit --tag gcr.io/my-first-project-2084/2048-game
+```
 
 #4.Deploy to Cloud Run
 
+```
 gcloud run deploy 2048-game \
   --image gcr.io/my-first-project-2084/2048-game \
   --platform managed \
   --region us-central1 \
   --allow-unauthenticated
+```
 
 
 👩‍💻 Contribution by Anvesha Tripathi
